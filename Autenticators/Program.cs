@@ -10,10 +10,10 @@ namespace Autenticators
         {
             // HOTP should produce 755224
             HOTP hotp = new HOTP(Encoding.UTF8.GetBytes("12345678901234567890"));
-            hotp.GenerateOTP();
+            Console.WriteLine(hotp.GenerateOTP());
 
             TOTP totp = new TOTP(Encoding.UTF8.GetBytes("Key"));
-            totp.GenerateOTP();
+            Console.WriteLine(totp.GenerateOTP());
         }
     }
 }
